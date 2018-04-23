@@ -67,7 +67,7 @@ public class GUIKontroler {
 			if (returnVal == JFileChooser.APPROVE_OPTION) {
 				File file = fc.getSelectedFile();
 				menjacnica.ucitajIzFajla(file.getAbsolutePath());
-				gp.prikaziSveValute();
+				gp.prikaziSveValute(menjacnica.vratiKursnuListu());
 			}	
 		} catch (Exception e1) {
 			JOptionPane.showMessageDialog(gp, e1.getMessage(),
@@ -118,7 +118,7 @@ public class GUIKontroler {
 			menjacnica.dodajValutu(valuta);
 
 			// Osvezavanje glavnog prozora
-			gp.prikaziSveValute();
+			gp.prikaziSveValute(menjacnica.vratiKursnuListu());
 			
 		} catch (Exception e1) {
 			JOptionPane.showMessageDialog(null, e1.getMessage(),
@@ -130,7 +130,7 @@ public class GUIKontroler {
 		try{
 			menjacnica.obrisiValutu(valuta);
 			
-			gp.prikaziSveValute();
+			gp.prikaziSveValute(menjacnica.vratiKursnuListu());
 		} catch (Exception e1) {
 			JOptionPane.showMessageDialog(null, e1.getMessage(),
 					"Greska", JOptionPane.ERROR_MESSAGE);

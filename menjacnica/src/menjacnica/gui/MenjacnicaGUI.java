@@ -47,6 +47,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 import java.io.File;
+import java.util.LinkedList;
 
 
 public class MenjacnicaGUI extends JFrame {
@@ -243,8 +244,8 @@ public class MenjacnicaGUI extends JFrame {
 		return table;
 	}
 	
-	public void prikaziSveValute() {
+	public void prikaziSveValute(LinkedList<Valuta> kursnaLista) {
 		MenjacnicaTableModel model = (MenjacnicaTableModel)(table.getModel());
-		model.staviSveValuteUModel(sistem.vratiKursnuListu());
+		model.staviSveValuteUModel(kursnaLista);
 	}
 }

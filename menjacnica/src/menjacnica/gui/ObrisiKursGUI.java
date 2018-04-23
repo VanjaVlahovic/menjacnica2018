@@ -42,8 +42,7 @@ public class ObrisiKursGUI extends JFrame {
 	private JButton btnOdus;
 	private JCheckBox chckbxZaistaObrisiKurs;
 	private JLabel label;
-	
-	private MenjacnicaGUI glavniProzor;
+
 	private Valuta valuta;
 
 	/**

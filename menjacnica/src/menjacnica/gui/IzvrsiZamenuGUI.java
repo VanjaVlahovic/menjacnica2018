@@ -52,7 +52,6 @@ public class IzvrsiZamenuGUI extends JFrame {
 	private JLabel lblKonacniIznos;
 	private JTextField textFieldKonacniIznos;
 
-	private MenjacnicaGUI glavniProzor;
 	private Valuta valuta;
 
 	/**
@@ -168,7 +167,6 @@ public class IzvrsiZamenuGUI extends JFrame {
 					Double konacniIznos = GUIKontroler.izvrsiZamenu(valuta, rdbtnProdaja.isSelected(), 
 							Double.parseDouble(textFieldIznos.getText()));
 					textFieldKonacniIznos.setText(""+konacniIznos);
-					dispose();
 				}
 			});
 			btnIzvrsiZamenu.setBounds(24, 234, 160, 25);
