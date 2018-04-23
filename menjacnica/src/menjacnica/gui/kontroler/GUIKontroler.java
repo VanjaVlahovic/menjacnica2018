@@ -44,19 +44,20 @@ public class GUIKontroler {
 	}
 	
 	public static void sacuvajUFajl() {
-		try {
+		
 			JFileChooser fc = new JFileChooser();
 			int returnVal = fc.showSaveDialog(null);
 
 			if (returnVal == JFileChooser.APPROVE_OPTION) {
 				File file = fc.getSelectedFile();
-
+				
+				try {
 				menjacnica.sacuvajUFajl(file.getAbsolutePath());
+				} catch (Exception e1) {
+						JOptionPane.showMessageDialog(gp, e1.getMessage(),
+								"Greska", JOptionPane.ERROR_MESSAGE);
+				}
 			}
-		} catch (Exception e1) {
-			JOptionPane.showMessageDialog(gp, e1.getMessage(),
-					"Greska", JOptionPane.ERROR_MESSAGE);
-		}
 	}
 
 	public static void ucitajIzFajla() {
